@@ -19,6 +19,7 @@ interface IDraggableCardProps {
 }
 
 function DraggableCard({ toDoId, toDoText, index }: IDraggableCardProps) {
+  localStorage.setItem(toDoId+"", toDoText);
   return (
     <Draggable draggableId={toDoId+""} index={index}>
       {(magic, snapshot) => (
@@ -34,5 +35,6 @@ function DraggableCard({ toDoId, toDoText, index }: IDraggableCardProps) {
     </Draggable>
   );
 }
+
 
 export default React.memo(DraggableCard);

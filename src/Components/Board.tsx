@@ -80,6 +80,7 @@ function Board({ toDos, boardId }: IBoardProps) {
           type="text"
           placeholder={`Add task on ${boardId}`}
         />
+
       </Form>
       <Droppable droppableId={boardId}>
         {(magic, info) => (
